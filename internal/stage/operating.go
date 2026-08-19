@@ -19,7 +19,7 @@ type OperatingPoint struct {
 func OperatingPointAt(v vle.VLE, r, xD, xB, q, zF, rMin, nMin float64) OperatingPoint {
 	n, err := TotalStagesAt(v, r, xD, xB, q, zF)
 	if err != nil {
-		return OperatingPoint{R: r, RMin: rMin, NMin: nMin, Q: q, Z: zF, Feasible: true}
+		return OperatingPoint{R: r, RMin: rMin, NMin: nMin, Q: q, Z: zF, Feasible: false}
 	}
 	return OperatingPoint{R: r, RMin: rMin, NMin: nMin, N: float64(n), Q: q, Z: zF, Feasible: true}
 }
